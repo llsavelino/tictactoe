@@ -238,7 +238,6 @@ fn main() {
     }
 
     // Símbolos dos jogadores
-
     let mut player1_symbol = 'x';
     let mut player2_symbol = 'o';
 
@@ -246,17 +245,34 @@ fn main() {
         if let Some(s1) = read_char_prompt("\nJogador, escolha seu símbolo (X, O, ∆, ♥ ...): ") {
             player1_symbol = s1;
         }
-        if let Some(s2) = read_char_prompt("\nAgora escolha o símbolo da IA: ") {
-            player2_symbol = s2;
+
+        loop {
+            if let Some(s2) = read_char_prompt("\nAgora escolha o símbolo da IA: ") {
+                if s2 != player1_symbol {
+                    player2_symbol = s2;
+                    break;
+                } else {
+                    println!("⚠️ O símbolo da IA não pode ser igual ao seu! Escolha outro.");
+                }
+            }
         }
     } else {
         if let Some(s1) = read_char_prompt("\nJogador 1, escolha seu símbolo (X, O, ∆, ♥ ...): ") {
             player1_symbol = s1;
         }
-        if let Some(s2) = read_char_prompt("\nJogador 2, escolha seu símbolo: ") {
-            player2_symbol = s2;
+
+        loop {
+            if let Some(s2) = read_char_prompt("\nJogador 2, escolha seu símbolo: ") {
+                if s2 != player1_symbol {
+                    player2_symbol = s2;
+                    break;
+                } else {
+                    println!("⚠️ O símbolo do Jogador 2 não pode ser igual ao do Jogador 1! Escolha outro.");
+                }
+            }
         }
     }
+
 
     println!("\nIniciando...\n");
     thread::sleep(Duration::from_secs(1));
@@ -286,3 +302,4 @@ fn main() {
     println!("\n==== Obrigado por Jogar ====\x07\r");
     clear_screen();
 }
+

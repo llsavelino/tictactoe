@@ -1,0 +1,10 @@
+[package]
+name = "jogo_da_velha"
+version = "0.1.0"
+edition = "2021"
+authors = ["Seu Nome <seu@email.com>"]
+description = "Jogo da Velha com IA em Rust"
+license = "MIT"
+
+[dependencies]
+rand = "0.8"

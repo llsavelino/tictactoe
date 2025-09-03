@@ -172,7 +172,7 @@ fn tic_tac_toe(ai_enabled: bool, difficulty: u8, p1: char, p2: char) -> bool {
             for _ in 0..3 {
                 print!(".");
                 let _ = io::stdout().flush();
-                thread::sleep(Duration::from_millis(500));
+                thread::sleep(Duration::from_millis(800));
             }
             println!();
             computer_move(&mut board, difficulty, p1, p2);
@@ -302,6 +302,7 @@ fn main() {
     println!("\n\x07==== Obrigado por Jogar ====\x07\r");
     clear_screen();
 }
+
 
 
 

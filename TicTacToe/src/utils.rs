@@ -34,9 +34,9 @@ pub fn print_table(board: &Board) {
     // Imprime os índices das colunas
     print!("\n     ");
     for y in 0..SIZE {
-        print!(" ${}  ", y);
+        print!(" {}  ", y);
     }
-    println!("\n   %====#=!|!=#====%");
+    println!("\n   %$===#=!|!=#===$%");
 
     for x in 0..SIZE {
         print!(" {} |", x);
@@ -52,5 +52,6 @@ pub fn print_table(board: &Board) {
         }
     }
 
-    println!("   #====%=!|!=%====#");
+    println!("   #$===%=!|!=%===$#");
 }
+

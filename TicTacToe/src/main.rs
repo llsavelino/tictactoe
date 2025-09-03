@@ -156,7 +156,7 @@ fn tic_tac_toe(ai_enabled: bool, difficulty: u8, p1: char, p2: char) -> bool {
             );
             let col = loop {
                 let c = read_usize_in_range(
-                    &format!("Jogador {} escolha uma coluna (0-{}): ", current_player, SIZE - 1),
+                    &format!("\nJogador {} escolha uma coluna (0-{}): ", current_player, SIZE - 1),
                     0,
                     SIZE - 1,
                 );
@@ -272,8 +272,9 @@ fn main() {
             }
         }
     }
-    
-    println!("\nIniciando...\n");
+
+    clear_screen();
+    println!("\nIniciando...\x07\n");
     thread::sleep(Duration::from_secs(1));
 
     let mut ia_wins = 0;
@@ -298,8 +299,9 @@ fn main() {
         }
     }
 
-    println!("\n==== Obrigado por Jogar ====\x07\r");
+    println!("\n\x07==== Obrigado por Jogar ====\x07\r");
     clear_screen();
 }
+
 
 

@@ -243,7 +243,7 @@ fn main() {
 
     if ai_choice {
         if let Some(s1) = read_char_prompt("\nJogador, escolha seu símbolo (X, O, ∆, ♥ ...): ") {
-            player1_symbol = s1;
+            player1_symbol = s1; 
         }
 
         loop {
@@ -272,8 +272,7 @@ fn main() {
             }
         }
     }
-
-
+    
     println!("\nIniciando...\n");
     thread::sleep(Duration::from_secs(1));
 
@@ -302,4 +301,5 @@ fn main() {
     println!("\n==== Obrigado por Jogar ====\x07\r");
     clear_screen();
 }
+
 

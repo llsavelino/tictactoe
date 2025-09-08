@@ -2,7 +2,7 @@
 name = "jogo_da_velha"
 version = "0.1.0"
 edition = "2021"
-authors = ["Seu Nome <seu@email.com>"]
+authors = ["<aves06914@gmail.com>"]
 description = "Jogo da Velha com IA em Rust"
 license = "MIT"
 

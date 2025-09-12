@@ -238,8 +238,8 @@ fn main() {
     }
 
     // Símbolos dos jogadores
-    let mut player1_symbol = 'x';
-    let mut player2_symbol = 'o';
+    let mut player1_symbol: char = 'x';
+    let mut player2_symbol: char = 'o';
 
     if ai_choice {
         if let Some(s1) = read_char_prompt("\nJogador, escolha seu símbolo (X, O, ∆, ♥ ...): ") {
@@ -302,6 +302,7 @@ fn main() {
     println!("\n\x07==== Obrigado por Jogar ====\x07\r");
     clear_screen();
 }
+
 
 
 
